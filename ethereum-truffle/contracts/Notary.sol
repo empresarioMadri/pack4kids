@@ -47,11 +47,7 @@ contract Notary {
 
   function hasProof(bytes32 proof) private view returns(bool) {
     DocumentSaved memory doc = documents[proof];
-    if (doc.exist){
-      return true;
-    } else {
-      return false;
-    }
+    return doc.exist;
   }
 
 }
